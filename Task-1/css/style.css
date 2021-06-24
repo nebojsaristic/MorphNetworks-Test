@@ -1,0 +1,138 @@
+:root {
+    --blue: #2196f3;
+    --purple: #5466b9;
+    --green: #2c8fa3;
+    --grey-light: #e4e4e4;
+    --grey-medium: #b6b8bc;
+    --grey-dark: #9f9a96;
+    --accent: #45a6f4;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.color-grey--medium {
+    color: var(--grey-medium);
+}
+
+.color-grey--dark {
+    color: var(--grey-dark);
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    min-height: 100%;
+}
+
+body{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, var(--purple), var(--green));
+    background-repeat: no-repeat;
+}
+
+.form,
+button {
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+button{
+    background-color: var(--blue);
+}
+
+button:hover {
+    background-color: var(--accent);
+}
+
+header {
+    background-color: var(--blue);
+}
+
+input[type="text"],
+input[type="email"] {
+    border-radius: 0;
+    padding: 5px 0 10px 0;
+    width: 100%;
+    display: block;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--grey-dark);
+    border: none;
+    border-bottom: 1px solid var(--grey-light);
+    transition: 0.2s ease all;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+}
+
+.input-circle {
+    transition: 0.2s ease all;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    color: var(--accent);
+    line-height: 24px;
+    text-align: center;
+    position: relative;
+}
+
+.input-circle.input-circle--complete {
+    font-size: 0;
+}
+
+div.radio-mask {
+    position: relative;
+}
+
+div.radio-mask input,
+div.radio-mask .radio-icon {
+    width: 20px;
+    height: 20px;
+}
+
+div.radio-mask input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div.radio-mask .radio-icon {
+    transition: 0.2s ease all;
+}
+
+div.radio-mask label {
+    font-size: 14px;
+}
+
+div.radio-mask input + .radio-icon {
+    background: url('../img/radio-unchecked.svg') no-repeat center;
+    background-size: contain;
+}
+
+div.radio-mask input:checked + .radio-icon {
+    background: url('../img/radio-checked.svg') no-repeat center;
+    background-size: contain;
+}

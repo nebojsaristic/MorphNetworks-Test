@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="css/tailwind.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/loader.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <title>Task-1</title>
+</head>
+<body>
+    <div class="content flex justify-center py-16">
+        <div class="form">
+            <header class="text-white py-7 px-16">
+                <h5 class="text-xs">New York State</h5>
+                <h2 class="text-xl">Request for Contact</h2>
+            </header>
+            <form class="bg-white py-4 px-8">
+                <div class="py-4 flex items-end">
+                    <div id="inputCircle1" class="input-circle mr-4 mb-2" data-number="1">
+                        1
+                        <div class="circle-loader hidden">
+                            <div class="checkmark hidden draw"></div>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <label for="firstname" class="text-xs fw-400 color-grey--medium block">First name</label>
+                        <input onblur="validate(this, 'inputCircle1')" type="text" id="firstname" name="firstname">
+                    </div>
+                </div>
+                <div class="py-4 flex items-end">
+                    <div id="inputCircle2" class="input-circle mr-4 mb-2" data-number="2">
+                        2
+                        <div class="circle-loader hidden">
+                            <div class="checkmark hidden draw"></div>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <label for="lastname" class="text-xs fw-400 color-grey--medium block">Last name</label>
+                        <input onblur="validate(this, 'inputCircle2')" type="text" id="lastname" name="lastname">
+                    </div>
+                </div> 
+                <div class="py-4 flex items-end">
+                    <div id="inputCircle3" class="input-circle mr-4 mb-2" data-number="3">
+                        3
+                        <div class="circle-loader hidden">
+                            <div class="checkmark hidden draw"></div>
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <label for="email" class="text-xs fw-400 color-grey--medium block">Email Address</label>
+                        <input onblur="validate(this, 'inputCircle3')" type="email" id="email" name="email">
+                    </div>
+                </div>
+                <div class="py-4 space-y-6">
+                    <div class="flex items-center">
+                        <div id="inputCircle4" class="input-circle mr-4" data-number="4">
+                            4
+                            <div class="circle-loader hidden">
+                                <div class="checkmark hidden draw"></div>
+                            </div>
+                        </div>
+                        <label class="text-lg block color-grey--medium">What is best time to contact you?</label>
+                    </div>
+                    <div class="ml-8">
+                        <div class="radio-mask flex items-center mb-4">
+                            <input oninput="validate(this, 'inputCircle4')" type="radio" id="monday" name="contact_time" value="monday3pm">
+                            <div class="radio-icon mr-2"></div>
+                            <label for="monday" class="color-grey--dark">Monday 3pm</label><br>
+                        </div>
+                        
+                        <div class="radio-mask flex items-center">
+                            <input oninput="validate(this, 'inputCircle4')" type="radio" id="tuesday" name="contact_time" value="tuesday3pm">
+                            <div class="radio-icon mr-2"></div>
+                            <label for="tuesday" class="color-grey--dark">Tuesday 3pm</label>
+                        </div>
+                    </div>                    
+                </div>
+                <button type="submit" class="background-color-accent text-white rounded-lg focus:outline-none py-2 px-3 my-4 mx-2">Submit</button>       
+            </form>
+        </div> 
+    </div>
+</body>
+</html>
